@@ -97,7 +97,7 @@ To set up and run this test automation framework on your local machine, follow t
 ### **Installation**
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/prabhadks/AssignmentWebAppTesting.git]
+    git clone https://github.com/prabhadks/AssignmentWebAppTesting.git
     cd AssignmentWebAppTesting
     ```
 2.  **Create and activate a Python virtual environment:**
