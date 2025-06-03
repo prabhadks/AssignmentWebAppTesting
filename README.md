@@ -8,10 +8,13 @@ This framework automates a specific user journey within a web application: searc
 ---
 
 ## **Test Run Locally:
-![Alt text for your GIF](https://github.com/prabhadks/AssignmentWebAppTesting/blob/master/testresults/WebAppTestingAssignment.gif)
+![Demonstration of the search and play streamer flow](https://github.com/prabhadks/AssignmentWebAppTesting/blob/master/testresults/WebAppTestingAssignment.gif)
 
 ## **Project Structure:
 
+Project is organized as follows:
+
+```
 AssignmentWebAppTesting
     application_config.env
     requirements.txt
@@ -37,6 +40,7 @@ AssignmentWebAppTesting
     utils\
         common_element_actions.py
         logger.py
+```
 
 ## 🏗️ Project Architecture & Design Principles
 This framework adheres to robust design patterns to ensure its modularity, readability, and ease of maintenance as the application under test evolves.
