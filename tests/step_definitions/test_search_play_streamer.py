@@ -29,10 +29,10 @@ def user_enters_search_term(directory_page, search_term):
     directory_page.wait_for_images_to_load()
 
 
-@when("User scrolls down 2 times on directory page")
-def user_scrolls_twice(directory_page):
-    directory_page.scroll()
-    directory_page.scroll()
+@when(parsers.parse("User scrolls down {count:d} times on directory page"))
+def user_scrolls_twice(directory_page, count):
+    for _ in range(count):
+        directory_page.scroll()
 
 
 @when("User selects a streamer")

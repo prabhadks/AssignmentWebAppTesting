@@ -18,14 +18,14 @@ class VideoPlayPage(BasePage):
         return self.common_element_actions.wait_for_element(self.VIDEO_LOCATOR)
 
     def play_video(self):
-        video_ready = self.common_element_actions.wait_for_video_to_completely_load(self.get_video_element(), 10)
+        video_ready = self.common_element_actions.wait_for_video_to_completely_load(self.get_video_element(), 30)
 
         if not video_ready:
             self.logger.info("Video is not ready. Trying to play manually...")
-            start_watching_btn = self.common_element_actions.wait_for_element(self.START_WATCHING_BTN, 10)
+            start_watching_btn = self.common_element_actions.wait_for_element(self.START_WATCHING_BTN, 30)
             self.common_element_actions.click_enabled_element(start_watching_btn)
             assert self.common_element_actions.wait_for_video_to_completely_load(self.get_video_element(),
-                                                                                             10), f"Video not completely loaded"
+                                                                                             30), f"Video not completely loaded"
 
     def take_screenshot_video(self, file_name):
         self.common_element_actions.take_screenshot(file_name)

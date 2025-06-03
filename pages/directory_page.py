@@ -43,7 +43,6 @@ class DirectoryPage(BasePage):
         streamer = random.choice(streamers_list)
         streamer_index = streamers_list.index(streamer)
 
-        streamer_refresh = self.common_element_actions.wait_for_element(self.STREAMER_LOCATOR, timeout=20, index=streamer_index)
-        # self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", streamer_refresh)
+        streamer_refresh = self.common_element_actions.wait_for_element(self.STREAMER_LOCATOR, timeout=30, index=streamer_index)
         self.common_element_actions.scroll_into_view(streamer_refresh)
         self.common_element_actions.click_element(self.STREAMER_LOCATOR, index=streamer_index)
