@@ -45,6 +45,9 @@ AssignmentWebAppTesting
 ## 🏗️ Project Architecture & Design Principles
 This framework adheres to robust design patterns to ensure its modularity, readability, and ease of maintenance as the application under test evolves.
 
+### **Collaboration-Focused Scenario Design**
+The framework is specifically designed using Pytest-BDD to enable clear, human-readable scenarios. This approach facilitates easy review and collaboration with Product Owners and other non-technical stakeholders, ensuring that automated tests accurately reflect business requirements and acceptance criteria.
+
 ### **Modular and Scalable Design**
 The core design prioritizes breaking down the testing surface into manageable, reusable components.
 
