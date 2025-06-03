@@ -33,7 +33,7 @@ class VideoPlayPage(BasePage):
             start_watching_btn = self.common_element_actions.wait_for_element(self.START_WATCHING_BTN, 30)
             self.common_element_actions.click_element(start_watching_btn)
             assert self.common_element_actions.wait_for_video_to_completely_load(self.get_video_element(),
-                                                                                 30), f"Video not completely loaded"
+                                                                                 30), "Video not completely loaded"
 
     def take_screenshot_video(self, file_name):
         self.common_element_actions.take_screenshot(file_name)
