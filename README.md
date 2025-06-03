@@ -3,16 +3,16 @@
 ---
 
 ## 🚀 Overview
-This framework automates a specific user journey within a web application: searching for content and playing a streamer's video. Built with an emphasis on scalability and maintainability, this project delivers a comprehensive testing solution.
+This framework automates the process of searching for content and playing a streamer’s video within a web application. It emphasizes scalability and maintainability, delivering a robust and comprehensive testing solution that ensures consistent performance across diverse use cases.
 
 ---
 
-## **Test Run Locally:
+**Test Run Locally:
 ![Demonstration of the search and play streamer flow](https://github.com/prabhadks/AssignmentWebAppTesting/blob/master/testresults/WebAppTestingAssignment.gif)
 
-## **Project Structure:
+**Project Structure:
 
-Project is organized as follows:
+The Project is organized as follows:
 
 ```
 AssignmentWebAppTesting
@@ -92,7 +92,7 @@ To set up and run this test automation framework on your local machine, follow t
 ### **Installation**
 1.  **Clone the repository:**
     ```bash
-    git clone []
+    git clone [https://github.com/prabhadks/AssignmentWebAppTesting.git]
     cd AssignmentWebAppTesting
     ```
 2.  **Create and activate a Python virtual environment:**
