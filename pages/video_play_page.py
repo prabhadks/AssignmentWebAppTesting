@@ -1,7 +1,10 @@
+from selenium.common import TimeoutException
+
 from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 
 from utils.logger import get_logger
+
 
 class VideoPlayPage(BasePage):
     VIDEO_LOCATOR = (By.TAG_NAME, "video")
@@ -18,14 +21,19 @@ class VideoPlayPage(BasePage):
         return self.common_element_actions.wait_for_element(self.VIDEO_LOCATOR)
 
     def play_video(self):
-        video_ready = self.common_element_actions.wait_for_video_to_completely_load(self.get_video_element(), 30)
+        try:
+            self.common_element_actions.wait_for_video_to_completely_load(self.get_video_element(), 30)
+            video_loaded_successfully = True
 
-        if not video_ready:
+        except TimeoutException:
             self.logger.info("Video is not ready. Trying to play manually...")
+            video_loaded_successfully = False
+
+        if not video_loaded_successfully:
             start_watching_btn = self.common_element_actions.wait_for_element(self.START_WATCHING_BTN, 30)
-            self.common_element_actions.click_enabled_element(start_watching_btn)
+            self.common_element_actions.click_element(start_watching_btn)
             assert self.common_element_actions.wait_for_video_to_completely_load(self.get_video_element(),
-                                                                                             30), f"Video not completely loaded"
+                                                                                 30), f"Video not completely loaded"
 
     def take_screenshot_video(self, file_name):
         self.common_element_actions.take_screenshot(file_name)

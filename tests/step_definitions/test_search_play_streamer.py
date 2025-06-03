@@ -30,7 +30,7 @@ def user_enters_search_term(directory_page, search_term):
 
 
 @when(parsers.parse("User scrolls down {count:d} times on directory page"))
-def user_scrolls_twice(directory_page, count):
+def user_scrolls(directory_page, count):
     for _ in range(count):
         directory_page.scroll()
 
