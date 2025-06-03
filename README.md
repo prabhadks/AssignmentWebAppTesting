@@ -7,10 +7,10 @@ This framework automates the process of searching for content and playing a stre
 
 ---
 
-**Test Run Locally:
+### **Test Run Locally**:
 ![Demonstration of the search and play streamer flow](https://github.com/prabhadks/AssignmentWebAppTesting/blob/master/testresults/WebAppTestingAssignment.gif)
 
-**Project Structure:
+### **Project Structure**:
 
 The Project is organized as follows:
 
